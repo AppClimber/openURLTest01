@@ -38,6 +38,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("indexPath.row=\(indexPath.row)")
+        
+        //let cell = self.tableView.cellForRow(at: indexPath)
+        switch indexPath.row {
+        case 0: // openURL1
+            simpleOpenURL()
+        default:
+            print("Do nothing")
+        }
     }
     
     
@@ -57,5 +65,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell;
     }
+
     
+    // MARK: Private method
+    
+    func simpleOpenURL() {
+        print(#file, #function)
+     
+        UIApplication.shared.open(URL(string: "https://www.yahoo.co.jp")!,
+                                  options: [:],
+                                  completionHandler: { result in
+                                    print("result=\(result)")
+        })
+        // 現在サポートされているOptionは，UIApplicationOpenURLOptionUniversalLinksOnlyのみ
+        // https://developer.apple.com/documentation/uikit/uiapplication/url_options?language=swift
+    }
+
 }

@@ -280,7 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GLXN7A2GYY;
 				INFOPLIST_FILE = openURLTest01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -289,6 +289,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsp.test.openURLTest01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb3334d7-ed33-4d2c-9aee-3e51725a9dcf";
+				PROVISIONING_PROFILE_SPECIFIER = IM4_iOSApp_Wildcard;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +300,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GLXN7A2GYY;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = openURLTest01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsp.test.openURLTest01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

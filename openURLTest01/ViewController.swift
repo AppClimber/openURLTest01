@@ -71,14 +71,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func simpleOpenURL() {
         print(#file, #function)
-     
-        UIApplication.shared.open(URL(string: "https://www.yahoo.co.jp")!,
+        
+        // UIApplication.shared.open(URL(string: "https://www.yahoo.co.jp")!,
+        
+        let url = URL(string: "openURLTest02://")
+        /*
+        UIApplication.shared.open(url!,
                                   options: [:],
                                   completionHandler: { result in
                                     print("result=\(result)")
         })
-        // 現在サポートされているOptionは，UIApplicationOpenURLOptionUniversalLinksOnlyのみ
-        // https://developer.apple.com/documentation/uikit/uiapplication/url_options?language=swift
+         */
+        
+        if ( UIApplication.shared.canOpenURL(url!) ) {
+            
+            UIApplication.shared.open(url!,
+                                      options: [:],
+                                      completionHandler: { result in
+                                        print("result=\(result)")
+            })
+            // 現在サポートされているOptionは，UIApplicationOpenURLOptionUniversalLinksOnlyのみ
+            // https://developer.apple.com/documentation/uikit/uiapplication/url_options?language=swift
+        }
+        else {
+            print("Can not open URL(\(url!.absoluteString))")
+        }
     }
 
 }
